@@ -34,7 +34,6 @@ ENV RBENV_ROOT=/usr/local/rbenv
 ENV PATH=${RBENV_ROOT}/bin:${RBENV_ROOT}/shims:${PATH}
 
 RUN git clone https://github.com/rbenv/rbenv.git ${RBENV_ROOT} \
-  && ${RBENV_ROOT}/bin/rbenv init \
   && mkdir -p ${RBENV_ROOT}/plugins \
   && git clone https://github.com/rbenv/ruby-build.git ${RBENV_ROOT}/plugins/ruby-build \
   && ${RBENV_ROOT}/plugins/ruby-build/install.sh \
